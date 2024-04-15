@@ -1,4 +1,4 @@
-package com.example.oblig3;
+package com.example.Obligatorisk-Oppgave-3;
 
 public class Billett {
     private String filmNavn;

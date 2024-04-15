@@ -1,4 +1,4 @@
-package com.example.oblig3;
+package com.example.Obligatorisk-Oppgave-3;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
