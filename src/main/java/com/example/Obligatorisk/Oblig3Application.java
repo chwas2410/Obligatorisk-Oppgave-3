@@ -1,4 +1,4 @@
-package com.example.oblig3;
+package com.example.Obligatorisk;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

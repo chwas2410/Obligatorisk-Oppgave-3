@@ -1,4 +1,4 @@
-package com.example.oblig3;
+package com.example.Obligatorisk;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
