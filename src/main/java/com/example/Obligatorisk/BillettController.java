@@ -1,12 +1,12 @@
 package com.example.Obligatorisk;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Comparator;
+
 
 
 @RestController
@@ -24,11 +24,27 @@ public class BillettController {
     public List<Billett> hentAlle(){
         return rep.hentAlleBilletter();
     }
+    @GetMapping("/hentEnBillett")
+    public Billett hentEnBillett(int id){
+        return rep.hentEnBillett(id);
+    }
+
+    @PostMapping("/endreEnBillett")
+    public void endreEnBillett(Billett billett){
+        rep.endreEnBillett(billett);
+    }
 
     @GetMapping("/slettAlle")
     public void slettAlle(){
         rep.slettAlleBilletter();
     }
+
+    @GetMapping("/slettEnBillett")
+    public void slettEnBillett(int id){
+        rep.slettEnBillett(id);
+    }
+
+
 }
 
 

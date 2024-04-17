@@ -1,5 +1,6 @@
-
-
+$(function(){
+    hentAlle();
+});
 function validerTelefonNr(telefonNr) {
     const regex = /^[0-9]{8}$/; // Sjekker om det er 8 tall
     return regex.test(telefonNr);
@@ -13,6 +14,7 @@ function validerEpost(epost) {
 
 function kjopBillett(){
     const billett = {
+
         filmNavn : $("#filmNavn").val(),
         antallBilletter : $("#antallBilletter").val(),
         fornavn : $("#fornavn").val(),
@@ -84,15 +86,15 @@ function hentAlle(){
 function formaterData(billetter) {
     let ut =
         "<table class='table'"+
-            "<thead>"+
-                "<tr>"+
-                    "<th>Film</th>"+
-                    "<th>Antall billetter</th>"+
-                    "<th>Fornavn</th>"+
-                    "<th>Etternavn</th>"+
-                    "<th>Telefonnr</th>"+
-                "<th>Epost</th>"+
-            "</tr>"+
+        "<thead>"+
+        "<tr>"+
+        "<th>Film</th>"+
+        "<th>Antall billetter</th>"+
+        "<th>Fornavn</th>"+
+        "<th>Etternavn</th>"+
+        "<th>Telefonnr</th>"+
+        "<th>Epost</th>"+
+        "</tr>"+
         "</thead>"+
         "<tbody>";
     for (const bil of billetter) {
@@ -103,11 +105,13 @@ function formaterData(billetter) {
             "<td>"+bil.etternavn+"</td>"+
             "<td>"+bil.telefonNr+"</td>"+
             "<td>"+bil.epost+"</td>"+
-        "</tr>";
+            "<td> <a class='btn btn-primary' href='endreBillett.html?id="+bil.id+"'>Endre</a></td>"+
+            "<td> <button class='btn btn-danger' onclick='slettEnBillett("+bil.id+")'>Slett</button></td>"+
+            "</tr>";
     }
     ut +=
-            "</tbody>"+
-       " </table>";
+        "</tbody>"+
+        " </table>";
     $("#output").html(ut);
 }
 function slettAlle(){
@@ -115,3 +119,11 @@ function slettAlle(){
         hentAlle();
     });
 }
+function slettEnBillett(id) {
+    const url = "/slettEnBillett?id="+id;
+    $.get( url, function() {
+        window.location.href = 'index.html';
+        hentAlle()
+    });
+};
+

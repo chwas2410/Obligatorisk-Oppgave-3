@@ -1,6 +1,8 @@
 package com.example.Obligatorisk;
 
 public class Billett {
+
+    private int id;
     private String filmNavn;
     private int antallBilletter;
     private String fornavn;
@@ -10,7 +12,9 @@ public class Billett {
 
     // Konstruktør, getters og setters
 
-    public Billett(String filmNavn, int antallBilletter, String fornavn, String etternavn, String telefonNr, String epost) {
+
+    public Billett(int id, String filmNavn, int antallBilletter, String fornavn, String etternavn, String telefonNr, String epost) {
+        this.id = id;
         this.filmNavn = filmNavn;
         this.antallBilletter = antallBilletter;
         this.fornavn = fornavn;
@@ -67,5 +71,13 @@ public class Billett {
 
     public void setEpost(String epost) {
         this.epost = epost;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
