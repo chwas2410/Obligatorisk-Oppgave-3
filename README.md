@@ -6,7 +6,7 @@ GitHub brukernavn: chwas2410
 
 Github repo URL: https://github.com/chwas2410/Obligatorisk-Oppgave-3.git
 
-Link til video gjennomgang: https://youtu.be/CXMmKWKX7TY
+Link til video gjennomgang: https://youtu.be/OLrf82NqHD4
 
 Fullt navn: Charlotte Wassnes
 
